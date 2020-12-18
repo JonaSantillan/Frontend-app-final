@@ -7,7 +7,11 @@ class Home extends React.Component {
       <div className={css.container}>
         <div className={css.title}>
           Hola {this.props.userName}
+          <div>Opciones</div>
+          <button>Agregar Usuario</button>
+          <button>Eliminar Usuario</button>
         </div>
+        <button>Logout</button>
       </div>
     )
   }
