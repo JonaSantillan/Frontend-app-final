@@ -21,7 +21,7 @@ class Login extends React.Component {
   render = () => {
     return (
       <div className={css.container}>
-        <div className={css.title}>Alumno</div>
+        <div className={css.title}>Iniciar Sesión</div>
           <Field name="email" component={TextInput} type="text" />
           <Field name="password" component={TextInput} type="password" />
         <button

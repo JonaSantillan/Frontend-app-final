@@ -32,7 +32,7 @@ export const loginError = (error) => {
 export const login = (email, password) => {
   return (dispacth) => {
     dispacth(loginFetching())
-    fetch("http://localhost:4000/auth/login", {
+    fetch("https://backend-app-mcga.herokuapp.com/auth/login", {
       headers: {
         'Content-Type': 'application/json'
       },
