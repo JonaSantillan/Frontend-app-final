@@ -14,30 +14,26 @@ class Login extends React.Component {
 
   componentDidUpdate = () => {
     if(this.props.logged) {
-      this.props.history.push('/home')
+      this.props.history.push('/')
     }
   }
 
   render = () => {
     return (
-      <div className={css.container}>
-        <div className={css.title}>Iniciar Sesión</div>
-          <Field name="email" component={TextInput} type="text" />
-          <Field name="password" component={TextInput} type="password" />
-        <button
-          type="button"
-          className={css.button}
-          onClick={this.props.handleSubmit}
-        >
-          {this.props.isFetching ? "Cargando" : "Iniciar sesión"}
-        </button>
-        <div className={css.error}>{this.props.messageError}</div>
-        {/* <button
-          className={css.addButton}
-          onClick={this.addCounter}
-        >
-          Agregar contador
-        </button> */}
+      <div className={css.app}>
+        <div className={css.container}>
+          <div className={css.title}>Login</div>
+            <Field name="email" component={TextInput} type="text" />
+            <Field name="password" component={TextInput} type="password" />
+            <div className={css.error}>{this.props.messageError}</div>
+          <button
+            type="button"
+            className={css.button}
+            onClick={this.props.handleSubmit}
+          >
+            {this.props.isFetching ? "Cargando" : "Iniciar sesión"}
+          </button>
+        </div>
       </div>
     )
   }

@@ -8,6 +8,7 @@ const intialStore = {
 const LOGIN_FETCHING = 'LOGIN_FETCHING'
 const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 const LOGIN_ERROR = 'LOGIN_ERROR'
+const LOGOUT_USER = 'LOGOUT_USER'
 
 export const loginFetching = () => {
   return {
@@ -26,6 +27,12 @@ export const loginError = (error) => {
   return {
     type: LOGIN_ERROR,
     payload: error,
+  }
+}
+
+export const logoutUser = () => {
+  return {
+      type: LOGOUT_USER,
   }
 }
 
@@ -53,6 +60,12 @@ export const login = (email, password) => {
     .catch((error) => {
       dispacth(loginError(error.message))
     })
+  }
+}
+
+export const logout = () => {
+  return (dispatch) => {
+      dispatch(logoutUser());
   }
 }
 
