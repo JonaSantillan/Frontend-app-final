@@ -9,4 +9,4 @@ const rootReducer = combineReducers({
   form: formReducer
 })
 
-export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
+export const store = createStore(Reducer, composeWithDevTools(applyMiddleware(thunk)))

@@ -13,7 +13,8 @@ const TextInput = (props) => {
 class Login extends React.Component {
 
   componentDidUpdate = () => {
-    if(this.props.logged) {
+    if(this.props.logged) 
+    {
       this.props.history.push('/')
     }
   }
